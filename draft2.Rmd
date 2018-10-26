@@ -1,0 +1,85 @@
+---
+output: 
+  pdf_document:
+    citation_package: natbib
+    keep_tex: true
+    fig_caption: true
+    latex_engine: pdflatex
+    template: ./svm-latex-ms.tex
+title: "What Should Computational Traders Do."
+author:
+- name: John von Neumann
+  affiliation: Jon M. Huntsman School of Business 
+abstract: "This paper will discuss how to detect a viable technical trading model when thousands of models are available to choose from.  It will review the highly controversial data snooping statistical method. It will explain how data snooping methods could be used in this case to computationally choose a viable technical trading strategy."
+keywords: "Bootstrapping, datasnooping, Technical Trading"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+geometry: margin=1in
+fontfamily: mathpazo
+fontsize: 11pt
+spacing: double
+bibliography: ./master.bib
+biblio-style: apsr
+---
+
+
+>  
+
+# Buchanan Questions
+1. Outline what Buchanan's main point is.
+    - The main point of  Buchanans article is to highlight that modern economist are much too concentrated on the idea of neoclassical economics. Because of this, they have been derailed by complicated mathematical models to explain what the market should be. He argues that economists should concentrate on the theory of markets instead. This means concentrating more on individual persons or entity exchange.
+2. What does Buchanan mean by the word ___catallatics___?
+    - Catallactics is a good way to summarize Buchanan's thoughts at a high level. Catallactics means explaining choices as they are, instead of what they should be.
+3. According to Buchanan what do most economists do? 
+    - most economists study and rely on equilibrium models instead of human activity
+4. What does he think they should do differently?
+    - He would suggest that economist should quit concerning themselves with allocation problem(choice) and more concentrate on exchange.
+# Preface
+Professor Brough, As I continue to read through my sources and better understand this idea, I imagine that the intro below and my whole mindset will change overtime.
+
+
+# Introduction
+Technical trading is a trading strategy that involves using past data to project future prices. This method is often viewed in contrast with fundamental trading strategies which involve finding the intrinsic value of a company given their financials. The very idea of technical trading being viable violates the Efficient Market Hypothesis by claiming that future prices are more or less unpredictable. The general investing world considers technical trading difficult and highly volatile. Something that makes technical trading difficult is that there are thousands of possible models that are made up different rules. That being said, is there a way to detect a viable model when so many models are available? In this paper, I will explore a method for fitting thousands of models over one data set to find models with significance.  
+
+# Literature review
+
+@Buchanan1979
+- Buchanan explores that the modern and majority of economists spend too much time concentrating on the wrong thing being neoclassical economics. He explains that economists should spend more time concentrating on exchange rather than allocation problems. Buchanan does not necessarily believe that economists should avoid complex mathematical models but believes that they should be approaching the problem differently.  
+
+@white2000reality
+-White claims that data snooping is a dnagerous practice to be aoided, but it is infact always there. He shows how to deal with data snooping on a simple model which proves that snooping can be undetaken with a degree of confidence. 
+
+@sullivan1999data
+- This paper utilizes White's bootstrap methodology to evaluate some simple trading strategies. This is the first time a comprehensive test of performance across technical trading strategies was presented.
+
+@metghalchi2012technical
+- this paper studies the profitability of technical trade strategies based on 9 popular strategies. they are testing the overall idea of whether or not technical traders can beat buy and hold traders. they recognized a negative relationship between trading combinations and profitability
+
+@quantshare trading software_2009
+- This website explores the idea of data snooping and the effects of it on studies being done on thousands of rules.
+
+
+
+# Outline
+
+ - Current technical trading setup, atmosphere, and professional perception
+ 
+ - Data snooping/dredging
+ 
+ - Bootstrap data snooping
+ 
+ - Determining a viable model. 
+ 
+ - Will it come down to tacit knowledge?
+ 
+ 
+
+
+<!--
+# References
+\setlength{\parindent}{-0.2in}
+\setlength{\leftskip}{0.2in}
+\setlength{\parskip}{8pt}
+\vspace*{-0.2in}
+\noindent
+-->
+
