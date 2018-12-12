@@ -1,0 +1,93 @@
+---
+title: "What Technical Traders Should Do"
+author:
+- affiliation: Jon M. Huntsman School of Business
+  name: Kyle Davies
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output:
+  pdf_document:
+    citation_package: natbib
+    fig_caption: yes
+    keep_tex: yes
+    latex_engine: pdflatex
+    template: ./svm-latex-ms.tex
+  html_document:
+    df_print: paged
+biblio-style: apsr
+indent: True
+fontfamily: mathpazo
+fontsize: 11pt
+geometry: margin=1in
+keywords: Bootstrapping, datasnooping, Technical Trading
+bibliography: ./master.bib
+spacing: double
+abstract: This paper discusses technical trading and the popular issue of data-snooping
+  that occurs when establishing strategies. Furthermore, it will discuss using a method
+  for determining if a strategy is superior after accounting for data-snooping.
+---
+
+
+ 
+#Introduction
+Institutions and individuals invest billions of dollars daily in hopes of earning a profit. In order to do this, it involves trading. Traders can generally be split into two main categories: the first being fundamental traders and the second are technical traders. Fundamental Traders analyze a company’s intrinsic value to determine if a company’s stock is under or overvalued. Technical traders retrospectively look at market data to detect patterns for the use of predicting future stock prices. This essay will explore the second method and possible ways to determine some significant strategies.
+
+#Technical Trading
+Technical traders are commonly known as chartists. James C. Van Horne and George C. Parker explain in their research that, “chartists rely exclusively on the relationship of the present market of stock to its past price history in making judgments about its purchase or sale.” @vanhorne1968technical Within finance, there is the idea of the efficient market hypothesis. This theory describes that the price of a share should reflect all of the relevant information. Because of this, technical traders should hypothetically not be able to produce excess returns. However, Halbert White, who has led the push in understanding technical trading, states, “numerous studies in finance literature have investigated technical analysis and have determined it has validity as an investment tool.” @white2000reality Mark Taylor, who researches technical analysis in foreign markets, conducted a survey of chief foreign exchange dealers and found that in excess of 90 percent of respondents place some weight on technical analysis when predicting future prices. @taylor1992use From these two researchers, White and Taylor, it seems that the market may not be as efficient as the finance industry indicates.
+
+#Technical Strategies
+One of the most challenging parts about technical trading is how to choose a significant trading strategy when there are thousands to choose from. In technical trading, you establish rules for a strategy. These rules are ideas on which you trade upon. Four of the most popular strategies are moving averages, moving average convergence divergence, relative strength index, and on-balance volume. @mitchell_2018
+
+Moving Average method smooths out time-price data to create a single looking “average” line. Based on this smooth line, a technical trader will trade off its slopes trend which simply shows what the price is doing. An actual trading method based on this is called crossovers. Crossovers signal a buy when short-term moving average crosses long-term moving average. A sell signal will occur when the short term once again crosses and drops below the long-term moving average.
+
+Moving Average Convergence Divergence (MACD) is a trend follower and momentum indicator that is showing convergence and divergence from a return of zero. An example of this strategy in deployment is identifying an above zero value or an extended period of time as an indicator of a likely uptrend. This would signal a buy. On the flip side, when there is a below zero for an extended period of time, the trend is likely down, which would signal a sale or short.
+
+Relative Strength Index (RSI) is an oscillator similar to MACD. This mathematical theory would detect a price movement and index it between 0 and 100. If this value was above 70 it would indicate that this security has been overbought and due for a correction. Under this, you would sell or short. When the value was below 30, it would indicate that it was oversold, and due for a gain. For this, you would then buy and ride the price appreciation.
+
+The last strategy I would like to share is called On-Balance Volume. This is a volume indicator as the name suggests. This strategy measures the amount of buying/selling pressure being experienced on a security. Typically increasing/decreasing volume should be linked to an increasing/decreasing price. If the volume was rising and the price is not, you could buy and expect the price to rise shortly after. If the price is rising and volume is not, it would indicate a ceiling in price.
+
+As you can tell, these four strategies can seem very complex, which is the reason that I wanted to explain them. These are just four of more than one thousand-plus strategies available to choose from. On top of having thousands of options, technical traders will tweak these to have barriers or knock, meaning nothing will happen until certain barriers are crossed. To complicate matters even more, traders can lap multiple strategies over each other so that nothing will happen until multiple rules are met. One of the hardest parts about technical trading is finding the right one that is statistically significant.
+
+#Making the choice
+The most common strategy that is being used to determine a viability is called back-testing. @wikipedia_2018 This method overlays a technical strategy over historical data and determines if the rules under which the strategy is created on would return a positive return or not. Since the invention and common use of the computer, this testing is easily performed over many securities across decades in moments.
+
+#Data-Snooping
+There is a very popular comic in which two scientists investigate the cause of acne. Scientist number 1 proposes that jelly beans cause acne, so they investigate. After they research jelly beans, they find that there is no link between jelly beans causing acne. Scientist number 2 determines that this settles the fact that jelly beans do not cause acne. Scientist 1 then stats that they hear it is only a certain color that causes it. So they use the same information to test 20 colors. Nineteen out of twenty experiments found that there was no link between that color and acne. However, one out of twenty experiments found that there was significance between green jelly beans and acne. Because of this, the scientists post on the news that they are 95% confident that green jelly beans are linked to acne. This comic draws to the fact that statistical significance can be confused with randomness or chance.
+
+There is a big error with back-testing that most technical traders are commonly found guilty of committing in one way or another. When you use one data set to determine something you will find yourself data-snooping. Halbert White explains that “data-snooping occurs when a given set of data is used more than once for purposes of inference or model selection.” @white2000reality Using a data set that had data that spans time is critical in determining a significant trading strategy. When doing this, similar to the jelly bean comic, there is a chance that the results you receive may be linked to chance instead of merit. @sullivan1999data
+
+#Reality Check
+Halbert White was the forerunner in battling data-snooping methods. He originally stated that “whenever a good forecasting model is obtained by an extensive specification search, there is always the danger that the observed good performance results not from actual forecasting ability, but instead just luck.“ @white2000reality White later goes on to explain that if you look hard enough and long enough at a dataset, you can often find one or more forecasting model that looks good but are actually useless. 
+To counter this, White provides a procedure to test whether a given model has predictive superiority over a benchmark to account for the effects of data-snooping. This procedure is known as White’s Reality Check. Previous to White’s Reality Check, data mining was not used to find potential strategies. Data mining examines databases in an attempt to generate new information. In this case, trading strategies. Data mining could not work before reality check because data mining could find thousands of patterns that returned significant returns over a benchmark but were determined to be mostly chance or randomness. Once White published this reality check process, funds were able to data mine and determine if individual strategies were significant with the test.
+
+#Multiple Strategy Check
+The Reality Check methodology is later used by Ryan Sullivan, Allan Timmerman, and original creator, Halbert White to create an expanded test. If an investor has experimented with a lot of trading rules, and the investor has a bunch of successful looking strategies, they are then able to find themselves in a problem of determining how much of the performance is a result of data-snooping or due to the merit of their strategy. The paper, “Data-Snooping, Technical Trading Rule Performance, and the Bootstrap” is the “first paper to present a means of calculating a comprehensive test of performance across all trading rules.” @sullivan1999data In this comprehensive test, they use 26 trading rules and apply the rules to 100 years of daily data. “This created tool summarizes in a single statistic the significance of the best-performing model after accounting for data-snooping.” @sullivan1999data The investor who has multiple rules that seem successful can then use their tool to determine if their strategy has merit.
+
+#Institutional Investors
+Having the ability to mine data and attempt to find significant data over one set of data seems very powerful but this does introduce data-snooping issues. Campbell Harvey, in the podcast, “Econ Talk”, says, “sometimes when we construct something, we are looking for what we want to find, sometimes what we want to find can happen by random chance.” @harvey_roberts_2015  I would argue that an institution has substantial pressure to generate excess returns. Because of this, I think that they could find themselves in a situation where they are looking so hard to find something significant that they find something by chance and call it significant. Harvey later says, “our procedure should be to eliminate that what we find is not a fluke.” @harvey_roberts_2015 My reason for writing this paper is to drive home the point that what technical traders should be doing is just as Harvey has stated, eliminate the flukes in their strategies and use what is left standing. 
+
+#Personal Investors
+Reality Check and the comprehensive test later created are mathematically and comprehensively intensive. Both the reality check and comprehensive test try to strip out the return based on chance or randomness form data-snooping. Unfortunately, there is no easy way to deal with data-snooping. However, for the personal investor - I suggest an alternative way that will reduce the effects of data-snooping. 
+    
+The less intensive way to reduce the likelihood of data-snooping issues is to test strategies on multiple data sets. This is similar to Sullivan, Timmerman, and White’s final significance test, but simplified. The first step in this strategy is to create, find, and determine what strategies the investor wants to potentially test. The second step in this method is to create two data sets for different time periods that would sit one right after the other. The first data step will be used to sample the full list of strategies. For this first list, test the rules and strategies over the first data step. This first step will act as a filter or funnel. At the end of the test, you should have strategies that returned excess returns, add them to the second list. Next, take the new list of strategies and test them on the second data set. At the end of this dataset, the strategies that performed well will have passed both tests and are ready for trading. @quantshare_trading_software_2009 An additional test that could be used to test these strategies is to apply these strategies to a paper money test. This test is an assurance test for the trader. What you do is test them in a database that lets you trade fake money. The multi data-set technique decreases dramatically the likelihood that the rules data suffer from data-snooping bias. 
+
+#Moving Forward
+In Sullivan, Timmerman, and White’s paper, they tested over 7000 trading rules in what is considered a much larger universe of rules. Of these strategies, many did have excess returns, but only historically. As said here, “historically, the best technical trading rule did indeed produce superior performance, but that, more recently, the markets have become more efficient and hence such opportunities have disappeared.” @sullivan1999data
+
+The realization that these strategies can perform well historically but do not perform as well moving into the current day brings up a further consideration. As superior trading strategies become known, the market will adjust with this additional information and correctly price securities. This is not to say that there are no superior returns in technical trading, but more to drive home the fact that technical trading has a high-risk high return profile, which should not be forgotten. 
+
+#Conclusion
+Technical trading strategies make up much of the financial market. A common error made in technical trading is data-snooping. Data-snooping is when one single data set is used to make inference about significance. This introduces the fact that the inference could be related more to chance or randomness than chance. An institutional technical trader should use the Sullivan, Timmerman, and White’s complex compressive test to back out data-snooping effect and give a significance level for each strategy. A personal investor, who does not have the resources or ability to run the comprehensive test, should test their strategy against two time period data sets. After strategies have been filtered by both sets, what remains could be used as a personal strategy with limited data-snooping issues.
+
+
+ 
+
+#References
+<!--
+# References
+\setlength{\parindent}{-0.2in}
+\setlength{\leftskip}{0.2in}
+\setlength{\parskip}{8pt}
+\vspace*{-0.2in}
+\noindent
+-->
+
